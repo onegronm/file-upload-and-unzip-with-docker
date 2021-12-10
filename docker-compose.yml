@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  file-upload-and-unzip-with-docker:
+    image: ${DOCKER_REGISTRY-}fileuploadandunzipwithdocker
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - myapp:/data
+volumes:
+  myapp:
